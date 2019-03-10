@@ -1,0 +1,26 @@
+.L25 = "result: %d\n" 
+op_dec result 0  
+op_dec i 1  
+op_dec .L4   
+.L4 = 0  
+op_if( 1 )goto .L5 
+.L5:    
+op_dec .L10   
+.L10 = result + 4
+result = .L10  
+.L6:    
+.L11:    
+op_dec .L16   
+.L16 = i < 10
+op_if( !.L16 )goto .L13 
+op_dec .L21   
+.L21 = result + i
+result = .L21  
+op_dec .L19   
+.L19 = i + 1
+i = .L19  
+op_goto .L11   
+.L13:    
+op_arg .L25   
+op_arg result   
+op_call printf   
