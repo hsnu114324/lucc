@@ -25,7 +25,7 @@ How to test:
 
     ./test.sh
 
-The resuly of the test:
+The result of the test:
 
     result: 49
 
